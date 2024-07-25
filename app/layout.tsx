@@ -1,3 +1,11 @@
+import "@/app/ui/global.css";
+import { inter } from "@/app/ui/fonts";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "首页",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
 }
